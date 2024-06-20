@@ -1,0 +1,47 @@
+@import "../../styles/colors.scss";
+.info {
+    &__block {
+        max-width: 80rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 0 1rem 2rem;
+        color: $c-pink-800;
+    }
+
+    &__text {
+        text-align: center;
+        color: $c-black;
+    }
+
+    
+    &__link,
+    &__title {
+        font-family: "tenpounds regular";
+        animation: fade-in 1s ease-out;
+    }
+
+    &__link:hover {
+        color: $c-black;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 720px) {
+    .info__text {
+        font-size: 1.5rem;
+    }
+}

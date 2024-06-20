@@ -1,0 +1,66 @@
+@import "../../../styles/colors.scss";
+
+.footer {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 0.2rem solid $c-green-cyan-500;
+    border-radius: 1rem;
+
+    &__list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 6fr 1fr; 
+        align-items: center;
+    }
+
+    &__span {
+        display: flex;
+        justify-content: center;
+        font-family: "tenpounds regular";
+    }
+
+    &__copyright {
+        text-align: center;
+
+        &:before {
+            content: '©';
+        }
+    }
+
+    &__item:not(&__description):hover,
+    &__item:not(&__description):focus {
+        filter: drop-shadow(0.3rem 0.3rem 1.3rem black);
+        transform: scale(1.05);
+    }
+
+    &__logo-rss {
+        width: 10rem;
+        height: 4rem;
+        background: url("../../../assets/svg/rs-school.svg") no-repeat center;
+    }
+
+    &__logo-github {
+        width: 5rem;
+        height: 4.6rem;
+        background: url("../../../assets/svg/icon-github.svg") no-repeat center;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .footer {
+    
+        &__list {
+           font-size: 1.2rem;
+        }
+    
+        &__logo-rss {
+           background-size: 6rem;
+        }
+    
+        &__logo-github {
+            background-size: 3rem;
+        }
+    }
+    
+}

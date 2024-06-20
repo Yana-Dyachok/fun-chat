@@ -1,0 +1,88 @@
+@import '../../../styles/colors.scss';
+.message {
+    &__block {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    &__container {
+        width: 50%;
+        margin-left: auto;
+        padding: 0.5rem;
+        background-color: $c-pink-100;
+        border-radius: 1rem;
+    }
+
+    &__header,
+    &__footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0.1rem 0.5rem;
+        font-size: 1.3rem;
+    }
+
+    &__text {
+        word-wrap: break-word;
+        padding: 0.5rem;
+        background-color: $c-white;
+    }
+
+    &__edit-text {
+        width: 100%;
+        word-wrap: break-word;
+        padding: 0.5rem;
+        background-color: $c-green-cyan-100;
+    }
+
+    &__edit {
+        width: 2rem;
+        height: 2rem;
+        margin-top: 0.2rem;
+        background: url('../../../assets/svg/edit.svg') no-repeat center;
+        background-size: 1.2rem;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__delete {
+        width: 2rem;
+        height: 2rem;
+        margin-top: 0.5rem;
+        background: url('../../../assets/svg/bin-delete.svg') no-repeat;
+        background-size: 1.2rem;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.users-message {
+    margin-left: 0;
+    background-color: $c-green-cyan-500;
+}
+
+@media (max-width: 630px) {
+    .message {
+        &__header,
+        &__footer {
+            font-size: 0.9rem;
+        }
+
+        &__text {
+            padding: 0 0.5rem;
+            background-color: $c-white;
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .message {
+        &__container {
+            width: 80%;
+        }
+    }
+}
